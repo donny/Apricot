@@ -98,10 +98,7 @@
 			children = (
 				5F08B9581F818AA30098FB82 /* AppDelegate.swift */,
 				5F08B95A1F818AA30098FB82 /* ViewController.swift */,
-				5F08B95C1F818AA30098FB82 /* Assets.xcassets */,
-				5F08B95E1F818AA30098FB82 /* Main.storyboard */,
-				5F08B9611F818AA30098FB82 /* Info.plist */,
-				5F08B9621F818AA30098FB82 /* Apricot.entitlements */,
+				5FB633371F82ED9000E61EFD /* Resources */,
 			);
 			path = Apricot;
 			sourceTree = "<group>";
@@ -122,6 +119,17 @@
 				5F08B9781F818AA30098FB82 /* Info.plist */,
 			);
 			path = ApricotUITests;
+			sourceTree = "<group>";
+		};
+		5FB633371F82ED9000E61EFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5F08B95C1F818AA30098FB82 /* Assets.xcassets */,
+				5F08B95E1F818AA30098FB82 /* Main.storyboard */,
+				5F08B9611F818AA30098FB82 /* Info.plist */,
+				5F08B9621F818AA30098FB82 /* Apricot.entitlements */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,10 +423,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Apricot/Apricot.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Apricot/Resources/Apricot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Apricot/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Apricot/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.worqbench.Apricot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,10 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Apricot/Apricot.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Apricot/Resources/Apricot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Apricot/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Apricot/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.worqbench.Apricot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
