@@ -21,4 +21,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
     return true
   }
+
+  @IBAction func openDocument(_ sender: NSMenuItem) {
+    guard let window = NSApplication.shared.windows.first else { return }
+
+    let openPanel = NSOpenPanel()
+    openPanel.allowsMultipleSelection = false
+    openPanel.canChooseDirectories = true
+    openPanel.canChooseFiles = false
+
+    openPanel.beginSheetModal(for: window, completionHandler: { response in
+      switch response {
+      case .OK:
+        if let url = openPanel.urls.first {
+          print(url)
+        }
+      default:
+        break
+      }
+    })
+  }
 }
