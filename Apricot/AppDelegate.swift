@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import SwiftGit2
+import Result
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -35,6 +37,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       case .OK:
         if let url = openPanel.urls.first {
           print(url)
+
+
+
+          let URL = url
+          let repo = Repository.at(URL)
+          if let repo = repo.value {
+            let latestCommit: Result<Commit, NSError> = repo
+              .HEAD()
+              .flatMap { repo.commit($0.oid) }
+            if let commit = latestCommit.value {
+              print("Latest Commit: \(commit.message) by \(commit.author.name)")
+            } else {
+              print("Could not get commit: \(latestCommit.error)")
+            }
+          } else {
+            print("Could not open repository: \(repo.error)")
+          }
+
+
+
         }
       default:
         break
