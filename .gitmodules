@@ -1,0 +1,3 @@
+[submodule "lib/SwiftGit2"]
+	path = lib/SwiftGit2
+	url = git://github.com/SwiftGit2/SwiftGit2.git
