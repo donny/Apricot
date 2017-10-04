@@ -1006,9 +1006,9 @@
 					"-lgit2",
 					"-force_load",
 					External/libgit2.a,
-					/usr/local/lib/libssh2.a,
-					"-lcrypto",
-					"-lssl",
+					$HOME/.homebrew/lib/libssh2.a,
+					$HOME/.homebrew/opt/openssl/lib/libcrypto.a,
+					$HOME/.homebrew/opt/openssl/lib/libssl.a,
 					"-lcurl",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libgit2.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1034,9 +1034,9 @@
 					"-lgit2",
 					"-force_load",
 					External/libgit2.a,
-					/usr/local/lib/libssh2.a,
-					"-lcrypto",
-					"-lssl",
+					$HOME/.homebrew/lib/libssh2.a,
+					$HOME/.homebrew/opt/openssl/lib/libcrypto.a,
+					$HOME/.homebrew/opt/openssl/lib/libssl.a,
 					"-lcurl",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libgit2.$(PRODUCT_NAME:rfc1034identifier)";
