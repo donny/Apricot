@@ -140,13 +140,6 @@
 			remoteGlobalIDString = 621E66F21C729EBB00A0F352;
 			remoteInfo = "libssh2-iOS";
 		};
-		5F8631DD1F84289200BDD38F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F8631BC1F8427EC00BDD38F /* SwiftGit2.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BEB31F221A0D6F7A00F525B9;
-			remoteInfo = "SwiftGit2-OSX";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +161,7 @@
 		5F48BDA51F871CF9003DBB86 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		5F48BDA61F871CF9003DBB86 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5F8631BC1F8427EC00BDD38F /* SwiftGit2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftGit2.xcodeproj; path = lib/SwiftGit2/SwiftGit2.xcodeproj; sourceTree = "<group>"; };
+		5FAD810C1F879E76003D3ACA /* Apricot.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Apricot.playground; sourceTree = "<group>"; };
 		5FB633391F82EFFC00E61EFD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,9 +198,10 @@
 				5F08B96A1F818AA30098FB82 /* ApricotTests */,
 				5F08B9751F818AA30098FB82 /* ApricotUITests */,
 				5F08B9561F818AA30098FB82 /* Products */,
+				5F8631D81F84283700BDD38F /* Frameworks */,
 				5F38F5E81F8430D20035A720 /* Result.xcodeproj */,
 				5F8631BC1F8427EC00BDD38F /* SwiftGit2.xcodeproj */,
-				5F8631D81F84283700BDD38F /* Frameworks */,
+				5FAD810C1F879E76003D3ACA /* Apricot.playground */,
 			);
 			sourceTree = "<group>";
 		};
@@ -321,7 +316,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5F8631DE1F84289200BDD38F /* PBXTargetDependency */,
 			);
 			name = Apricot;
 			productName = Apricot;
@@ -596,11 +590,6 @@
 			isa = PBXTargetDependency;
 			target = 5F08B9541F818AA30098FB82 /* Apricot */;
 			targetProxy = 5F08B9731F818AA30098FB82 /* PBXContainerItemProxy */;
-		};
-		5F8631DE1F84289200BDD38F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SwiftGit2-OSX";
-			targetProxy = 5F8631DD1F84289200BDD38F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
