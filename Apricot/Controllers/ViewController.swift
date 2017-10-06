@@ -35,8 +35,7 @@ class ViewController: NSViewController {
   }
 
   func showRepository(url: URL) {
-    let URL = url
-    let repo = Repository.at(URL)
+    let repo = Repository.at(url)
     if let repo = repo.value {
       let latestCommit: Result<Commit, NSError> = repo
         .HEAD()
@@ -44,10 +43,10 @@ class ViewController: NSViewController {
       if let commit = latestCommit.value {
         print("Latest Commit: \(commit.message) by \(commit.author.name)")
       } else {
-        print("Could not get commit: \(latestCommit.error)")
+        print("Could not get commit: \(latestCommit.error!)")
       }
     } else {
-      print("Could not open repository: \(repo.error)")
+      print("Could not open repository: \(repo.error!)")
     }
   }
 }

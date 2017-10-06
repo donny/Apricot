@@ -161,7 +161,7 @@
 		5F48BDA51F871CF9003DBB86 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		5F48BDA61F871CF9003DBB86 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5F8631BC1F8427EC00BDD38F /* SwiftGit2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftGit2.xcodeproj; path = lib/SwiftGit2/SwiftGit2.xcodeproj; sourceTree = "<group>"; };
-		5FAD810C1F879E76003D3ACA /* Apricot.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Apricot.playground; sourceTree = "<group>"; };
+		5FAD810C1F879E76003D3ACA /* Apricot.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Apricot.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5FB633391F82EFFC00E61EFD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
