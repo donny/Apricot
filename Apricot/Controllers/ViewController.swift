@@ -7,19 +7,30 @@
 //
 
 import Cocoa
+import SpriteKit
 import SwiftGit2
 import Result
 
 class ViewController: NSViewController {
+  @IBOutlet var sceneKitView: SKView!
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
 
-  }
+    if let view = self.sceneKitView {
+      // Load the SKScene from 'GameScene.sks'
+      if let scene = SKScene(fileNamed: "GameScene") {
+        // Set the scale mode to scale to fit the window
+        scene.scaleMode = .aspectFill
 
-  override var representedObject: Any? {
-    didSet {
-    // Update the view, if already loaded.
+        // Present the scene
+        view.presentScene(scene)
+      }
+
+      view.ignoresSiblingOrder = true
+
+      view.showsFPS = true
+      view.showsNodeCount = true
     }
   }
 
