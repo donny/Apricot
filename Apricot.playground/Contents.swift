@@ -23,20 +23,29 @@ func trace(repository: Repository, prefix: String, commit: Commit) -> Void {
   }
 }
 
+func commitIteratorTest(repository: Repository) {
+  guard let branch = repository.localBranches().value?.first else { return }
+  let commitIterator = repository.commits(in: branch)
 
+  while let commit = commitIterator.next()?.value {
+    let message = commit.message.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).prefix(50)
+
+    print("\(commit.parents.count) Commit : \(message)... by \(commit.author.name)")
+
+  }
+}
 
 let url = URL(fileURLWithPath: "/Users/donny.kurniawan/unix/tmp/hellogitworld")
 let repo = Repository.at(url)
 if let repo = repo.value {
   let latestCommit: Result<Commit, NSError> = repo
     .HEAD()
-    .flatMap { ref in
-      return repo.commit(ref.oid)
-    }
-  if let commit = latestCommit.value {
-    // print("Latest Commit: \(commit.message) by \(commit.author.name)")
+    .flatMap { repo.commit($0.oid) }
 
-    trace(repository: repo, prefix: "|", commit: commit)
+  if let commit = latestCommit.value {
+//    print("Latest Commit: \(commit.message) by \(commit.author.name)")
+//    trace(repository: repo, prefix: "|", commit: commit)
+    commitIteratorTest(repository: repo)
   } else {
     print("Could not get commit: \(latestCommit.error!)")
   }
