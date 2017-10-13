@@ -15,7 +15,6 @@ class WindowController: NSWindowController {
 
   override func windowDidLoad() {
     super.windowDidLoad()
-    popUpButton.removeAllItems()
   }
 
   @IBAction func performOpenRepositoryAction(_ sender: NSButton) {
@@ -23,9 +22,7 @@ class WindowController: NSWindowController {
   }
 
   @IBAction func performBranchSelectedAction(_ sender: NSPopUpButton) {
-    guard let controller = self.contentViewController as? ViewController
-      else { return }
-
+    guard let controller = self.contentViewController as? ViewController else { return }
     controller.branchName = sender.itemTitle(at: sender.indexOfSelectedItem)
   }
 
@@ -49,6 +46,7 @@ class WindowController: NSWindowController {
             controller.repository = repository
             controller.branchName = branches.first?.name
 
+            self.popUpButton.removeAllItems()
             branches.forEach {
               self.popUpButton.addItem(withTitle: $0.name)
             }
