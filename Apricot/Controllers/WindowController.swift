@@ -7,10 +7,32 @@
 //
 
 import Cocoa
+import SwiftGit2
+import Result
 
 class WindowController: NSWindowController {
+  @IBOutlet var popUpButton: NSPopUpButton!
+
   override func windowDidLoad() {
     super.windowDidLoad()
+    popUpButton.removeAllItems()
+  }
+
+  func showLocalBranches(repository: Repository) {
+    repository.localBranches().value?.forEach {
+      self.popUpButton.addItem(withTitle: $0.name)
+    }
+    if self.popUpButton.numberOfItems > 0 {
+      self.performBranchSelectedAction(self.popUpButton)
+    }
+  }
+
+  @IBAction func performOpenRepositoryAction(_ sender: NSButton) {
+    openRepository()
+  }
+
+  @IBAction func performBranchSelectedAction(_ sender: NSPopUpButton) {
+    print(sender.indexOfSelectedItem)
   }
 
   func openRepository() {
@@ -27,6 +49,13 @@ class WindowController: NSWindowController {
         if let url = openPanel.urls.first {
           if let controller = self.contentViewController as? ViewController {
             controller.showRepository(url: url)
+
+            let repository = Repository.at(url)
+            if let repository = repository.value {
+              self.showLocalBranches(repository: repository)
+            } else {
+              print("Could not open repository: \(repository.error!)")
+            }
           }
         }
       default:
