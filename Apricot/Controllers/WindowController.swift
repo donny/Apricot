@@ -18,25 +18,21 @@ class WindowController: NSWindowController {
     popUpButton.removeAllItems()
   }
 
-  func showLocalBranches(repository: Repository) {
-    repository.localBranches().value?.forEach {
-      self.popUpButton.addItem(withTitle: $0.name)
-    }
-    if self.popUpButton.numberOfItems > 0 {
-      self.performBranchSelectedAction(self.popUpButton)
-    }
-  }
-
   @IBAction func performOpenRepositoryAction(_ sender: NSButton) {
     openRepository()
   }
 
   @IBAction func performBranchSelectedAction(_ sender: NSPopUpButton) {
-    print(sender.indexOfSelectedItem)
+    guard let controller = self.contentViewController as? ViewController
+      else { return }
+
+    controller.branchName = sender.itemTitle(at: sender.indexOfSelectedItem)
   }
 
   func openRepository() {
-    guard let window = self.window else { return }
+    guard let window = self.window,
+      let controller = self.contentViewController as? ViewController
+      else { return }
 
     let openPanel = NSOpenPanel()
     openPanel.allowsMultipleSelection = false
@@ -47,15 +43,18 @@ class WindowController: NSWindowController {
       switch response {
       case .OK:
         if let url = openPanel.urls.first {
-          if let controller = self.contentViewController as? ViewController {
-            controller.showRepository(url: url)
+          if let repository = Repository.at(url).value,
+            let branches = repository.localBranches().value,
+            branches.count > 0 {
+            controller.repository = repository
+            controller.branchName = branches.first?.name
 
-            let repository = Repository.at(url)
-            if let repository = repository.value {
-              self.showLocalBranches(repository: repository)
-            } else {
-              print("Could not open repository: \(repository.error!)")
+            branches.forEach {
+              self.popUpButton.addItem(withTitle: $0.name)
             }
+            self.performBranchSelectedAction(self.popUpButton)
+          } else {
+            print("ERROR: could not open repository or no branches")
           }
         }
       default:

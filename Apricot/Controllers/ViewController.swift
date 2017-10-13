@@ -13,6 +13,8 @@ import Result
 
 class ViewController: NSViewController {
   @IBOutlet var sceneKitView: SKView!
+  var repository: Repository?
+  var branchName: String?
 
   override func viewDidLoad() {
     super.viewDidLoad()
