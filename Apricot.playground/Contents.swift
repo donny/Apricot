@@ -30,7 +30,23 @@ func commitIteratorTest(repository: Repository) {
   while let commit = commitIterator.next()?.value {
     let message = commit.message.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).prefix(50)
 
-    print("\(commit.parents.count) Commit : \(message)... by \(commit.author.name)")
+    // Work in progress
+    print("CHECK ME OUT --> \(commit.parents.count) Commit : \(message)... by \(commit.author.name)")
+    if commit.parents.count > 1 {
+      var commitParent = commit.parents[1]
+      var isRun = true
+
+      while isRun, let pc = repository.commit(commitParent.oid).value {
+        print("--> \(pc.message)")
+        if pc.parents.count > 0 {
+          commitParent = pc.parents[0]
+        } else {
+          isRun = false
+        }
+      }
+    }
+    // Work in progress
+
 
   }
 }
