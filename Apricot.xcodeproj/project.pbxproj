@@ -13,6 +13,8 @@
 		5F08B9601F818AA30098FB82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F08B95E1F818AA30098FB82 /* Main.storyboard */; };
 		5F08B96C1F818AA30098FB82 /* ApricotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F08B96B1F818AA30098FB82 /* ApricotTests.swift */; };
 		5F08B9771F818AA30098FB82 /* ApricotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F08B9761F818AA30098FB82 /* ApricotUITests.swift */; };
+		5F14CC3C1F915F2700B46B60 /* ErrorScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F14CC3A1F915F2700B46B60 /* ErrorScene.sks */; };
+		5F14CC3D1F915F2700B46B60 /* ErrorScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F14CC3B1F915F2700B46B60 /* ErrorScene.swift */; };
 		5F48BDA71F871CFA003DBB86 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F48BD951F871CF9003DBB86 /* GameScene.swift */; };
 		5F48BDA81F871CFA003DBB86 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F48BDA51F871CF9003DBB86 /* Actions.sks */; };
 		5F48BDA91F871CFA003DBB86 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F48BDA61F871CF9003DBB86 /* GameScene.sks */; };
@@ -156,6 +158,8 @@
 		5F08B9721F818AA30098FB82 /* ApricotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApricotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F08B9761F818AA30098FB82 /* ApricotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApricotUITests.swift; sourceTree = "<group>"; };
 		5F08B9781F818AA30098FB82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F14CC3A1F915F2700B46B60 /* ErrorScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ErrorScene.sks; sourceTree = "<group>"; };
+		5F14CC3B1F915F2700B46B60 /* ErrorScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorScene.swift; sourceTree = "<group>"; };
 		5F38F5E81F8430D20035A720 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = lib/SwiftGit2/Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
 		5F48BD951F871CF9003DBB86 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		5F48BDA51F871CF9003DBB86 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 		5F08B9571F818AA30098FB82 /* Apricot */ = {
 			isa = PBXGroup;
 			children = (
+				5F14CC351F915EE200B46B60 /* Scenes */,
 				5F48BDA51F871CF9003DBB86 /* Actions.sks */,
 				5F48BDA61F871CF9003DBB86 /* GameScene.sks */,
 				5F48BD951F871CF9003DBB86 /* GameScene.swift */,
@@ -244,6 +249,15 @@
 				5F08B9781F818AA30098FB82 /* Info.plist */,
 			);
 			path = ApricotUITests;
+			sourceTree = "<group>";
+		};
+		5F14CC351F915EE200B46B60 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5F14CC3A1F915F2700B46B60 /* ErrorScene.sks */,
+				5F14CC3B1F915F2700B46B60 /* ErrorScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		5F38F5E91F8430D20035A720 /* Products */ = {
@@ -527,6 +541,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F14CC3C1F915F2700B46B60 /* ErrorScene.sks in Resources */,
 				5F48BDA91F871CFA003DBB86 /* GameScene.sks in Resources */,
 				5F08B95D1F818AA30098FB82 /* Assets.xcassets in Resources */,
 				5F48BDA81F871CFA003DBB86 /* Actions.sks in Resources */,
@@ -559,6 +574,7 @@
 				5F08B9591F818AA30098FB82 /* AppDelegate.swift in Sources */,
 				5F48BDA71F871CFA003DBB86 /* GameScene.swift in Sources */,
 				5FB6333A1F82EFFC00E61EFD /* WindowController.swift in Sources */,
+				5F14CC3D1F915F2700B46B60 /* ErrorScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
