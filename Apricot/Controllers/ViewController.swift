@@ -44,6 +44,8 @@ class ViewController: NSViewController {
   private func refreshView() {
     if repository == nil || branchName == nil {
       loadScene(name: "ErrorScene")
+    } else {
+      loadScene(name: "MainScene")
     }
   }
 

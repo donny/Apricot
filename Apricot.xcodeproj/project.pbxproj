@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5F015FFC1F91DB03003C98CB /* InitialScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F015FFB1F91DB03003C98CB /* InitialScene.sks */; };
 		5F01600E1F91DB0C003C98CB /* InitialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01600D1F91DB0C003C98CB /* InitialScene.swift */; };
+		5F0160101F91E0A1003C98CB /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F01600F1F91E0A1003C98CB /* MainScene.sks */; };
+		5F0160121F91E0AA003C98CB /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0160111F91E0AA003C98CB /* MainScene.swift */; };
 		5F08B9591F818AA30098FB82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F08B9581F818AA30098FB82 /* AppDelegate.swift */; };
 		5F08B95B1F818AA30098FB82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F08B95A1F818AA30098FB82 /* ViewController.swift */; };
 		5F08B95D1F818AA30098FB82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F08B95C1F818AA30098FB82 /* Assets.xcassets */; };
@@ -149,6 +151,8 @@
 /* Begin PBXFileReference section */
 		5F015FFB1F91DB03003C98CB /* InitialScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = InitialScene.sks; sourceTree = "<group>"; };
 		5F01600D1F91DB0C003C98CB /* InitialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScene.swift; sourceTree = "<group>"; };
+		5F01600F1F91E0A1003C98CB /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
+		5F0160111F91E0AA003C98CB /* MainScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
 		5F08B9551F818AA30098FB82 /* Apricot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apricot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F08B9581F818AA30098FB82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F08B95A1F818AA30098FB82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 				5F14CC3B1F915F2700B46B60 /* ErrorScene.swift */,
 				5F015FFB1F91DB03003C98CB /* InitialScene.sks */,
 				5F01600D1F91DB0C003C98CB /* InitialScene.swift */,
+				5F01600F1F91E0A1003C98CB /* MainScene.sks */,
+				5F0160111F91E0AA003C98CB /* MainScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -551,6 +557,7 @@
 				5F48BDA91F871CFA003DBB86 /* GameScene.sks in Resources */,
 				5F08B95D1F818AA30098FB82 /* Assets.xcassets in Resources */,
 				5F015FFC1F91DB03003C98CB /* InitialScene.sks in Resources */,
+				5F0160101F91E0A1003C98CB /* MainScene.sks in Resources */,
 				5F48BDA81F871CFA003DBB86 /* Actions.sks in Resources */,
 				5F08B9601F818AA30098FB82 /* Main.storyboard in Resources */,
 			);
@@ -580,6 +587,7 @@
 				5F08B95B1F818AA30098FB82 /* ViewController.swift in Sources */,
 				5F08B9591F818AA30098FB82 /* AppDelegate.swift in Sources */,
 				5F48BDA71F871CFA003DBB86 /* GameScene.swift in Sources */,
+				5F0160121F91E0AA003C98CB /* MainScene.swift in Sources */,
 				5F01600E1F91DB0C003C98CB /* InitialScene.swift in Sources */,
 				5FB6333A1F82EFFC00E61EFD /* WindowController.swift in Sources */,
 				5F14CC3D1F915F2700B46B60 /* ErrorScene.swift in Sources */,
