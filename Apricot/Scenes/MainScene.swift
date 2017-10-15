@@ -42,8 +42,8 @@ class MainScene: SKScene {
 
 
     var path = CGMutablePath()
-    path.move(to: CGPoint(x: 100, y: 100))
-    path.addLine(to: CGPoint(x: 500, y: 500))
+    path.move(to: CGPoint(x: spinnyNode.frame.midX, y: spinnyNode.frame.midY))
+    path.addLine(to: CGPoint(x: spinnyNode2.frame.midX, y: spinnyNode2.frame.midY))
 
     let shape = SKShapeNode()
     shape.path = path
