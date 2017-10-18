@@ -19,36 +19,20 @@ class MainScene: SKScene {
     }
 
 
-
     let w = (self.size.width + self.size.height) * 0.05
-    let spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-
-    spinnyNode.lineWidth = 2.5
-//    spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-//    spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 2.0),
-//                                      SKAction.fadeOut(withDuration: 2.0),
-//                                      SKAction.removeFromParent()]))
-    spinnyNode.position = CGPoint(x: -100, y: -100)
-    spinnyNode.strokeColor = SKColor.blue
-
+    let spinnyNode = CommitNode.init()
     addChild(spinnyNode)
 
 
-    let spinnyNode2 = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-    spinnyNode2.lineWidth = 2.5
-    spinnyNode2.position = CGPoint(x: -100, y: 100)
-    spinnyNode2.strokeColor = SKColor.blue
+    let spinnyNode2 = CommitNode.init()
+    spinnyNode2.position = CGPoint(x: -100, y: -100)
     addChild(spinnyNode2)
 
 
-    var path = CGMutablePath()
-    path.move(to: CGPoint(x: spinnyNode.frame.midX, y: spinnyNode.frame.midY))
-    path.addLine(to: CGPoint(x: spinnyNode2.frame.midX, y: spinnyNode2.frame.midY))
+    let source = CGPoint(x: spinnyNode.frame.midX, y: spinnyNode.frame.midY)
+    let destination = CGPoint(x: spinnyNode2.frame.midX, y: spinnyNode2.frame.midY)
 
-    let shape = SKShapeNode()
-    shape.path = path
-    shape.strokeColor = SKColor.red
-    shape.lineWidth = 2
+    let shape = LineNode.init(from: source, to: destination)
     addChild(shape)
 
 
