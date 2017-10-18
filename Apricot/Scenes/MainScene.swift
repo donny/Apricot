@@ -12,14 +12,8 @@ class MainScene: SKScene {
   private var label: SKLabelNode?
 
   override func didMove(to view: SKView) {
-    self.label = self.childNode(withName: "//mainLabel") as? SKLabelNode
-    if let label = self.label {
-      label.alpha = 0.0
-      label.run(SKAction.fadeIn(withDuration: 2.0))
-    }
-
-
     let w = (self.size.width + self.size.height) * 0.05
+    
     let spinnyNode = CommitNode.init()
     addChild(spinnyNode)
 
