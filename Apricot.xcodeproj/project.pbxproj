@@ -23,6 +23,8 @@
 		5F48BDA81F871CFA003DBB86 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F48BDA51F871CF9003DBB86 /* Actions.sks */; };
 		5F48BDA91F871CFA003DBB86 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F48BDA61F871CF9003DBB86 /* GameScene.sks */; };
 		5F8631D91F84283700BDD38F /* SwiftGit2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8631C91F8427EC00BDD38F /* SwiftGit2.framework */; };
+		5F9261501F97E942009741CE /* CommitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F92614F1F97E942009741CE /* CommitNode.swift */; };
+		5F9261521F97E955009741CE /* LineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9261511F97E955009741CE /* LineNode.swift */; };
 		5FB6333A1F82EFFC00E61EFD /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB633391F82EFFC00E61EFD /* WindowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +175,8 @@
 		5F48BDA51F871CF9003DBB86 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		5F48BDA61F871CF9003DBB86 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5F8631BC1F8427EC00BDD38F /* SwiftGit2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftGit2.xcodeproj; path = lib/SwiftGit2/SwiftGit2.xcodeproj; sourceTree = "<group>"; };
+		5F92614F1F97E942009741CE /* CommitNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitNode.swift; sourceTree = "<group>"; };
+		5F9261511F97E955009741CE /* LineNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNode.swift; sourceTree = "<group>"; };
 		5FAD810C1F879E76003D3ACA /* Apricot.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Apricot.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5FB633391F82EFFC00E61EFD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +234,7 @@
 		5F08B9571F818AA30098FB82 /* Apricot */ = {
 			isa = PBXGroup;
 			children = (
+				5F92613E1F97E91E009741CE /* Nodes */,
 				5F14CC351F915EE200B46B60 /* Scenes */,
 				5F48BDA51F871CF9003DBB86 /* Actions.sks */,
 				5F48BDA61F871CF9003DBB86 /* GameScene.sks */,
@@ -306,6 +311,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F92613E1F97E91E009741CE /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				5F92614F1F97E942009741CE /* CommitNode.swift */,
+				5F9261511F97E955009741CE /* LineNode.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		5FB633371F82ED9000E61EFD /* Resources */ = {
@@ -585,7 +599,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F08B95B1F818AA30098FB82 /* ViewController.swift in Sources */,
+				5F9261521F97E955009741CE /* LineNode.swift in Sources */,
 				5F08B9591F818AA30098FB82 /* AppDelegate.swift in Sources */,
+				5F9261501F97E942009741CE /* CommitNode.swift in Sources */,
 				5F48BDA71F871CFA003DBB86 /* GameScene.swift in Sources */,
 				5F0160121F91E0AA003C98CB /* MainScene.swift in Sources */,
 				5F01600E1F91DB0C003C98CB /* InitialScene.swift in Sources */,
